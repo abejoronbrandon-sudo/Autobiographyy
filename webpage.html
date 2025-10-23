@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Autobiography — A Simple, Hardworking Student</title>
+  <style>
+    :root{
+      --bg:#f7f9fc; --card:#ffffff; --accent:#0b74de; --muted:#6b7280;
+      --radius:12px; --pad:18px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#eef4fb);color:#111}
+    .container{max-width:900px;margin:36px auto;padding:18px}
+    header{display:flex;gap:18px;align-items:center}
+    .avatar{width:104px;height:104px;border-radius:14px;flex:0 0 104px;background:linear-gradient(135deg,#cfe9ff,#ffffff);display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700;font-size:34px}
+    h1{margin:0;font-size:22px}
+    p.lead{color:var(--muted);margin:6px 0 0}
+
+    .card{background:var(--card);border-radius:var(--radius);padding:var(--pad);box-shadow:0 6px 18px rgba(11,116,222,0.06);margin-top:18px}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    .section{margin-bottom:12px}
+    h2{font-size:16px;margin:0 0 8px}
+    .meta{color:var(--muted);font-size:14px}
+
+    .profile-list{list-style:none;padding:0;margin:6px 0 0}
+    .profile-list li{padding:8px 0;border-bottom:1px dashed #eee}
+
+    .actions{display:flex;gap:8px;margin-top:10px}
+    button{background:var(--accent);color:#fff;border:0;padding:8px 12px;border-radius:10px;cursor:pointer}
+    button.ghost{background:transparent;color:var(--accent);border:1px solid rgba(11,116,222,0.12)}
+
+    .editable{background:#fbfdff;padding:12px;border-radius:10px;border:1px dashed #e6eefb}
+    .label{font-size:13px;color:var(--muted);margin-bottom:6px}
+
+    .stats{display:flex;gap:10px;margin-top:6px}
+    .stat{flex:1;background:linear-gradient(180deg,#fff,#fbfdff);padding:10px;border-radius:10px;text-align:center}
+    .stat strong{display:block;font-size:18px}
+
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr;}
+      .avatar{width:84px;height:84px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar" id="avatar">RB</div>
+      <div>
+        <h1 id="name">Ron Brandon Abejo</h1>
+        <p class="lead" id="one-liner">A simple, hardworking student who believes in steady progress and giving his best every day.</p>
+        <div class="actions">
+          <button id="editBtn">Edit</button>
+          <button id="printBtn" class="ghost">Print / Save PDF</button>
+          <button id="downloadBtn" class="ghost">Download HTML</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section class="card section">
+          <h2>About Me</h2>
+          <div class="editable" id="about" contenteditable="false">
+            Hi — I’m Ron, a First-year high school student who works part-time after school and studies diligently.
+            I value responsibility, punctuality, and small improvements each day. I enjoy sport, helping my classmates,
+            and learning practical skills that will help me provide for my daily life a student. My dream is to graduate with honors and
+            pursue a degree in Information Technology.
+          </div>
+        </section>
+
+        <section class="card section">
+          <h2>Education & Achievements</h2>
+          <ul class="profile-list">
+            <li><strong>School:</strong> LLCC — First-year college (BIT)</li>
+            <li><strong>GPA:</strong> hoping to be in dean's list:3</li>
+            <li><strong>Awards:</strong> None so Far</li>
+          </ul>
+        </section>
+
+        <section class="card section">
+          <h2>Daily Routine</h2>
+          <div class="meta">A simple, steady routine that balances school, work, and rest.</div>
+          <ol style="margin-top:10px">
+            <li>5:00 AM — Wake up, short exercise, and cook</li>
+            <li>7:00 AM — School classes</li>
+            <li>7:30 PM — Study and homework</li>
+            <li>10:00 PM — Wind down, rest</li>
+          </ol>
+        </section>
+
+        <section class="card section">
+          <h2>Personal Values</h2>
+          <p class="meta">These guide my choices and keep me focused.</p>
+          <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+            <div class="stat"><strong>Discipline</strong><span class="meta">Daily practice</span></div>
+            <div class="stat"><strong>Respect</strong><span class="meta">For teachers & peers</span></div>
+            <div class="stat"><strong>Perseverance</strong><span class="meta">Keep going</span></div>
+          </div>
+        </section>
+
+        <section class="card section">
+          <h2>Short Story — Why I Work Hard</h2>
+          <div class="editable" id="story" contenteditable="false">
+            Growing up, I watched my parents stretch every peso so we could have food and school supplies. I promised myself
+            I would contribute and not
